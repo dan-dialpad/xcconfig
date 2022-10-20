@@ -4,6 +4,13 @@ import PackageDescription
 
 let package = Package(
     name: "XCConfig",
+    platforms: [
+        .macOS(.v13),
+        .iOS(.v16),
+        .tvOS(.v16),
+        .macCatalyst(.v16),
+        .watchOS(.v9)
+    ],
     products: [
         .library(
             name: "XCConfig",
@@ -16,13 +23,15 @@ let package = Package(
     targets: [
         .target(
             name: "XCConfig",
-            dependencies: []
+            dependencies: [],
+            path: "Sources"
         ),
         .testTarget(
             name: "XCConfigTests",
             dependencies: [
                 "XCConfig"
-            ]
+            ],
+            path: "Tests"
         ),
     ]
 )
