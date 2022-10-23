@@ -1,5 +1,5 @@
 //
-//  FiXCConfigFileManagerMockle.swift
+//  XCConfigFileManagerMock.swift
 //  XCConfigTests
 //
 //  Created by Javier Cicchelli on 03/10/2022.

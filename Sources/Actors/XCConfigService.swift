@@ -20,6 +20,10 @@ public actor XCConfigService {
         self.handler = XCConfigHandler()
     }
     
+    init(handler: XCConfigFileHandler = XCConfigHandler()) {
+        self.handler = handler
+    }
+    
     // MARK: Functions
     
     public func read(fromURL url: URL) async throws -> [any XCConfigRow] {
