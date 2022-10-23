@@ -24,6 +24,12 @@ public actor XCConfigService {
         self.handler = handler
     }
     
+}
+
+// MARK: - XCConfigFileService
+
+extension XCConfigService: XCConfigFileService {
+    
     // MARK: Functions
     
     public func read(fromURL url: URL) async throws -> [any XCConfigRow] {
@@ -35,5 +41,5 @@ public actor XCConfigService {
         try await handler.verify(url: url)
         try await handler.write(rows: rows, toURL: url)
     }
-
+    
 }
