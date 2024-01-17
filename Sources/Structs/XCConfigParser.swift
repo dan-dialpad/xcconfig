@@ -51,7 +51,7 @@ private extension XCConfigParser {
                 One("/")
                 OneOrMore("/")
                 Optionally(One(.whitespace))
-                OneOrMore(.anyNonNewline)
+                Optionally(OneOrMore(.anyNonNewline))
             } transform: {
                 String($0)
             }
