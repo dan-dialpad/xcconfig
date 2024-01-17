@@ -7,8 +7,8 @@
 //
 
 public struct XCConfigRowProperty {
-    let key: String
-    let value: String
+    public let key: String
+    public let value: String
 }
 
 // MARK: - XCConfigRowType
